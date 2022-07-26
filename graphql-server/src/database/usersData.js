@@ -1,4 +1,4 @@
-const users = [
+const usersData = [
   {
     id: '46c38661-a087-4d2c-a9cc-53d4b8f15abc',
     name: 'Vishwas Raman',
@@ -50,8 +50,4 @@ const users = [
   },
 ];
 
-const db = {
-  users,
-};
-
-export default db;
+export default usersData

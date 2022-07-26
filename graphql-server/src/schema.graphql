@@ -1,5 +1,9 @@
+## this file can't be imported normally, the object needs to be passed inside the server instance
+
 type Query {
-  users(query: String): [User!]!
+  hello: String
+  world: Int
+  users: [User]
 }
 
 type User {
