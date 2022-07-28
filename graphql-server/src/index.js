@@ -26,5 +26,5 @@ server.start(() => {
   console.log('Server is running on http://localhost:4000');
 });
 
-server.post("/users", (request, response) => { return response.response("method working")})
+
 
