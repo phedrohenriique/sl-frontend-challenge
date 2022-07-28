@@ -5,6 +5,7 @@ import { styles } from '../configuration/styles/styles'
 import BasicButton from '../components/Button/BasicButton'
 import BasicCard from '../components/Cards/BasicCard'
 import ListCard from '../components/Cards/ListCard'
+import UsersCard from '../components/Cards/UsersCard'
 
 export default function Home(props: any) {
 
@@ -22,7 +23,7 @@ export default function Home(props: any) {
             <Box
                 sx={styles.mainLeftMenu}
                 minWidth="30vw"
-                minHeight="100vh"
+                maxHeight="300px"
                 width="fit-content"
             >
                 <BasicCard>
@@ -37,7 +38,8 @@ export default function Home(props: any) {
                 minWidth="70vw"
             >
                 <ListCard>
-
+                    <UsersCard />
+                    <UsersCard />
                 </ListCard>
             </Box>
         </Box >

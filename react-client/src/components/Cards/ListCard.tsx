@@ -1,18 +1,17 @@
 import BasicCard from "./BasicCard"
-import { Container } from "@mui/material"
+import { Container, Box } from "@mui/material"
+import { styles } from "../../configuration/styles/styles"
 
 export default function ListCard(props: any) {
     return (
         <BasicCard
-            {...props}
         >
-            <Container
-                maxWidth="sm"
-                sx={{ backgroundColor: "red" }}
-            >
-                asdsadad
-                {props.children}
-            </Container>
+                <Container
+                    maxWidth="sm"
+                    sx={styles.listCardContainer}
+                >
+                    {props.children}
+                </Container>
         </BasicCard>
     )
 }
