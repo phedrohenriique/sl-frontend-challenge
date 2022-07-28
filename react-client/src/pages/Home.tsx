@@ -1,5 +1,5 @@
 import React from 'react'
-import { request } from '../configuration/API'
+import { useFetch } from '../configuration/API'
 import { Box } from '@mui/material'
 import { styles } from '../configuration/styles/styles'
 import BasicButton from '../components/Button/BasicButton'
@@ -8,10 +8,17 @@ import ListCard from '../components/Cards/ListCard'
 import UsersCard from '../components/Cards/UsersCard'
 
 export default function Home(props: any) {
+    const [show, setShow] = React.useState(false)
+    const [fetchData] = useFetch("http://localhost:4000")
 
-    React.useEffect(() => {
-        request()
-    }, [])
+    const showUsers = () => {
+        setShow(true)
+    }
+
+    const hideUsers = () => {
+        setShow(false)
+    }
+    //setData(fetchData)
 
     return (
         <Box
@@ -26,9 +33,19 @@ export default function Home(props: any) {
                 maxHeight="300px"
                 width="fit-content"
             >
-                <BasicCard>
-                    <BasicButton>
+                <BasicCard
+                    gap="1em"
+                    justifyContent="space-between"
+                >
+                    <BasicButton
+                        onClick={showUsers}
+                    >
                         Show Users List
+                    </BasicButton>
+                    <BasicButton
+                        onClick={hideUsers}
+                    >
+                        Hide Users List
                     </BasicButton>
                 </BasicCard>
             </Box>
@@ -38,8 +55,15 @@ export default function Home(props: any) {
                 minWidth="70vw"
             >
                 <ListCard>
-                    <UsersCard />
-                    <UsersCard />
+                    {
+                        show
+                            ? fetchData.map((data: any) => {
+                                return (
+                                    <UsersCard key={data.id} data={data} />
+                                )
+                            })
+                            : ""
+                    }
                 </ListCard>
             </Box>
         </Box >

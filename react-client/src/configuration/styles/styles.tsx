@@ -16,7 +16,7 @@ export const styles = {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: "flex-start"
+        justifyContent: "space-between"
     },
     mainRightMenu: {
         // background: "blue",
@@ -43,18 +43,22 @@ export const styles = {
     },
     usersCard: {
         padding: "1em",
-        backgroundColor: "green",
+        backgroundColor: "white",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
         gap: "1em",
         weight: "boldest",
-        width: "fit-content",
+        maxWidth: "50px",
         height: "fit-content",
-        borderRadius: "20px",
+        borderRadius: "10px",
         color: "black",
-        fontFamily: "Montserrat"
+        fontFamily: "Montserrat",
+        "&:hover":{
+            transform: "scale(1.1)",
+            cursor: "pointer"
+        }
     }
 
 }

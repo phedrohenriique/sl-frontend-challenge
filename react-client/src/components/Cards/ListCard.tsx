@@ -1,5 +1,5 @@
 import BasicCard from "./BasicCard"
-import { Container, Box } from "@mui/material"
+import { Container } from "@mui/material"
 import { styles } from "../../configuration/styles/styles"
 
 export default function ListCard(props: any) {
