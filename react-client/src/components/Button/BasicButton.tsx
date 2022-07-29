@@ -1,6 +1,7 @@
 import { Button } from '@mui/material'
+import { BasicButtonType } from '../../configuration/types/types'
 
-export default function BasicButton(props: any) {
+export default function BasicButton(props: BasicButtonType): JSX.Element {
     return (
         <Button
             variant="contained"

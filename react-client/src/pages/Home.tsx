@@ -1,5 +1,5 @@
 import React from 'react'
-import { useFetch } from '../configuration/API'
+import { useFetch } from '../configuration/hooks/API'
 import { Box } from '@mui/material'
 import { styles } from '../configuration/styles/styles'
 import BasicButton from '../components/Button/BasicButton'
@@ -7,7 +7,7 @@ import BasicCard from '../components/Cards/BasicCard'
 import ListCard from '../components/Cards/ListCard'
 import UsersCard from '../components/Cards/UsersCard'
 
-export default function Home(props: any) {
+export default function Home(): JSX.Element {
     const [show, setShow] = React.useState(false)
     const [fetchData] = useFetch("http://localhost:4000")
 

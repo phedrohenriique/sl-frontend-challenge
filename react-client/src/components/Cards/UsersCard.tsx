@@ -1,9 +1,9 @@
-import React from 'react'
 import BasicCard from './BasicCard'
 import { styles } from '../../configuration/styles/styles'
 import { Typography, Box } from "@mui/material"
+import { UserCardType } from '../../configuration/types/types'
 
-export default function UsersCard(props: any) {
+export default function UsersCard(props: UserCardType): JSX.Element {
 
     const { name, email, phone, avatar } = props.data
 

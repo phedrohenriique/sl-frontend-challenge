@@ -1,11 +1,12 @@
 import React from "react"
+import { RequestOptionsType } from "../types/types"
 
 // url "http://localhost:4000"
 
-export const useFetch: any = (url: any) => {
+export const useFetch: any = (url: string) => {
     const [fetchData, setFetchData] = React.useState([])
 
-    const requestOptions: any = {
+    const requestOptions: RequestOptionsType = {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
